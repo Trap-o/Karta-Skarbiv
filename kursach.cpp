@@ -9,11 +9,10 @@ int main()
 
 {
     // * змінні
-    const double pi = atan(1.0) * 4;
+    const double pi = asin(1.0) * 2; // арксинус від одиниці це пі/2, домножую на 2 і виходить пі
     double X = 0, Y = 0, steps = 0;
-
     int actions = 0, direction = 0, language = 0, engMenu = 0, ukrMenu = 0, exit = 0;
-
+    // тут всюди виставляю 0, бо без прирівняння до - працює неправильно
     // * вибір мови
     do
     {
@@ -22,7 +21,7 @@ int main()
              << "2. English" << endl;
         cout << "Your language: ";
         cin >> language;
-
+        // звичайне меню у циклі ду-вайл, яке буде запитувати ввести 1 чи 2 поки не ввести 1 чи 2
         switch (language)
         {
             // * українське меню
@@ -63,7 +62,7 @@ int main()
                 {
                     cin >> direction >> steps;
 
-                    X = X + sin(pi / 4 * (direction - 1)) * steps;
+                    X = X + sin(pi / 4 * (direction - 1)) * steps; 
 
                     Y = Y + cos(pi / 4 * (direction - 1)) * steps;
                 }
@@ -105,7 +104,7 @@ int main()
                 if (abs(Y) < 0.001)
                     Y = 0;
 
-                cout.precision(4);
+                cout.precision(3);
                 cout << "Скарб знаходиться за координатами: " << X << " " << Y << endl;
                 break;
             }
@@ -217,7 +216,7 @@ int main()
                 if (abs(Y) < 0.001)
                     Y = 0;
 
-                cout.precision(4);
+                cout.precision(3);
                 cout << "Treasure: " << X << " " << Y << endl;
                 break;
             }
