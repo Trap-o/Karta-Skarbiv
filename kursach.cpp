@@ -24,7 +24,7 @@ int main()
         // звичайне меню у циклі ду-вайл, яке буде запитувати ввести 1 чи 2 поки не ввести 1 чи 2
         switch (language)
         {
-            // * українське меню
+            // * ukrMenu
         case 1:
             cout << "Що ви хочете зробити? " << endl
                  << "1. Робота з текстовим файлом" << endl
@@ -37,7 +37,7 @@ int main()
 
             switch (ukrMenu)
             {
-            // * український файл
+            // * ukrFile
             case 1:
             {
                 ifstream cin("mapa.txt");   // відкриваю файл на читання
@@ -83,7 +83,7 @@ int main()
                 break;
             }
 
-                // * українська консолька
+                // * ukrConsole
             case 2:
             {
                 cout << "Введіть кількість дій: ";
@@ -108,7 +108,7 @@ int main()
                 cout << "Скарб знаходиться за координатами: " << X << " " << Y << endl;
                 break;
             }
-                // * українська інструкція
+                // * ukrInstruction
                 // ! хотілось би зробити якісь бордери для нормальної читабельності тексту
                 // ? наче зробив більш-менш
             case 3:
@@ -136,7 +136,7 @@ int main()
             system("PAUSE");
             return 0;
 
-        // * англійське меню
+        // * engMenu
         case 2:
         {
             cout << "Do you want to work with text file or with console? " << endl
@@ -149,7 +149,7 @@ int main()
 
             switch (engMenu)
             {
-            // * англ файл
+            // * engFile
             case 1:
             {
                 ifstream cin("mapa.txt");
@@ -194,7 +194,7 @@ int main()
 
                 break;
             }
-            // * англ консолька
+            // * engConsole
             case 2:
             {
                 setlocale(LC_ALL, "English");
@@ -220,7 +220,7 @@ int main()
                 cout << "Treasure: " << X << " " << Y << endl;
                 break;
             }
-            // * англ інструкція
+            // * engInstruction
             case 3:
             {
                 cout << "Instruction: " << endl
@@ -233,6 +233,7 @@ int main()
                      << "\n5. Exit the program. Selecting this item exits the program" << endl;
                 break;
             }
+	// * engExit
             case 5:
             {
                 cout << "Closing the program..." << endl;
@@ -240,11 +241,13 @@ int main()
                 system("PAUSE");
                 return 0;
             }
+                    // * engDefault
             default:
                 cout << "Just print 1, 2, 3, 4 or 5!" << endl;
             }
             break;
         }
+               // * just default
         default:
             cout << "Just print 1 or 2!" << endl;
         }
