@@ -1,2 +1,1 @@
-Coordinates of treasure: 
-3.000 2.000
+The number of steps from 1 to 1000. Follow the instructions!
