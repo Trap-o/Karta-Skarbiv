@@ -1,1 +1,2 @@
-The number of steps from 1 to 1000. Follow the instructions!
+Coordinates of treasure: 
+X = 0.707 Y = 2.707
