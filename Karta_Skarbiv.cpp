@@ -189,7 +189,7 @@ int main()
                                  << "1. Працювати з файлами. Програма зчитує дані з файлу mapa.txt. У нього ви маєте завчасно ввести необхідні для правильної роботи програми дані у такому форматі:\nУ перший рядок вводиться кількість вказівок (число від 1 до 40), далі у певну кількість рядків, відповідно кількості вказівок, через Enter вказується напрям руху (цифру від 1 до 8) та кількість кроків у цьому напрямку (від 1 до 1000). Вказівки мають вводитись у форматі «напрям_руху [пробіл] кількість_кроків». Після вибору пункту вас одразу поверне до загального меню. Перевірити результат можна у файлі skarb.txt, де ви побачите відповідь – кінцеву координату скарбу (якщо файлу не було створено завчасно – програма сама його створить).\nЯкщо введена кількість вказівок більша за кількість рядків з вказівками, то вони будуть повторюватись стільки ж разів, скільки і введен число вказівок. Тому для точності бажаного результату рекомендується вводити стільки ж рядків з вказівками, скільки і було введено вказівок.\nЯкщо ж введена кількість вказівок менша за кількість рядків з цими вказівками, то обрахується кількість рядків, відповідна числу вказівок.\nТакож ви можете не закриваючи саму програму змінювати значення у файлі mapa.txt і знову обрахувати кінцеву координату (файл skarb.txt перед цим треба закрити)." << endl
                                  << "2. Робота з консоллю. Працюючи за допомогою консолі, відповідно до тексту-запиту, ви вводите необхідні дані (вказівки – від 1 до 40, напрям руху – цифру від 1 до 8, кількість кроків у цьому напрямку – від 1 до 1000). Формат вводу даних – «напрям_руху [пробіл] кількість_кроків». Кінцева координата теж виводиться у консоль." << endl
                                  << "3. Перегляд інструкції до програми. При виборі цього пункту меню ви маєте можливість прочитати інструкцію, яка пояснить вам як правильно користуватись програмою." << endl
-                                 << "4. Зміна зовнішнього вигляду консолі. Ви маєте можливість змінити зовнішній вигляд консолі: колір фону (обираєте потрібний номер чи літеру з списку), колір шрифту (обираєте потрібний номер чи літеру з списку), розмір шрифту (вводите необхідне число). Якщо ви напишите цифру чи літеру крім запропонованих зі списку, то вам видасть повідомлення про помилку англійською. Просто натискаєте Enter і вас знову поверне до пункту 4, де ви зможете переобрати кольори із запропонованих. Якщо ж введена вами літера була з НЕ англійського алфавіту, то помилки не буде, вас просто поверне до п.4." << endl
+                                 << "4. Зміна зовнішнього вигляду консолі. Ви маєте можливість змінити зовнішній вигляд консолі: колір фону (обираєте потрібний номер чи літеру з списку), колір шрифту (обираєте потрібний номер чи літеру з списку), розмір шрифту (вводите необхідне число).\nВи не можете обрати однаковий колір тексту і фону – у такому випадку програма поверне вас до головного меню.\nЯкщо ви напишите цифру чи літеру крім запропонованих зі списку, то вам видасть повідомлення про помилку англійською. Просто натискаєте Enter і вас знову поверне до пункту 4, де ви зможете переобрати кольори із запропонованих.\nЯкщо ж введена вами літера була з НЕ англійського алфавіту, то помилки не буде, вас просто поверне до п.4." << endl
                                  << "5. Вихід з програми. При виборі даного пункту здійснюється вихід з програми\n"
                                  << endl;
                             break;
@@ -217,21 +217,22 @@ int main()
                                     {
                                         system("cls"); // очистка консолі
                                         cout << "Список кольорів:" << endl
-                                             << "0 – чорний" << endl
-                                             << "1 – синій" << endl
-                                             << "2 – зелений" << endl
-                                             << "3 – блакитний" << endl
-                                             << "4 – червоний" << endl
-                                             << "5 – бузковий" << endl
-                                             << "6 – жовтий" << endl
-                                             << "7 – білий" << endl
-                                             << "8 – сірий" << endl
-                                             << "9 – яскраво-синій" << endl
-                                             << "А – яскраво-зелений" << endl
-                                             << "B – яскраво-блакитний" << endl
-                                             << "C – яскраво-червоний" << endl
-                                             << "E – яскраво-жовтий" << endl
-                                             << "F – яскраво-білий" << endl
+                                             << "0 – Чорний" << endl
+                                             << "1 – Синій" << endl
+                                             << "2 – Зелений" << endl
+                                             << "3 – Аква" << endl
+                                             << "4 – Червоний" << endl
+                                             << "5 – Бузковий" << endl
+                                             << "6 – Жовтий" << endl
+                                             << "7 – Білий" << endl
+                                             << "8 – Сірий" << endl
+                                             << "9 – Світло-синій" << endl
+                                             << "А – Світло-зелений" << endl
+                                             << "B – Світло-аква" << endl
+                                             << "C – Світло-червоний" << endl
+                                             << "D – Світло-бузковий" << endl
+                                             << "E – Світло-жовтий" << endl
+                                             << "F – Яскраво-білий" << endl
                                              << endl;
 
                                         cout << "Колір тексту: ";
@@ -448,7 +449,7 @@ int main()
                                  << "1. Work with files. The program reads data from the mapa.txt file. In it, you must enter in advance the data necessary for the correct operation of the program in the following format:\nThe number of instructions is entered in the first line (a number from 1 to 40), then in a certain number of lines, according to the number of instructions, the direction of movement (a number from 1 to 8) and the number of steps in this direction (from 1 to 1000) are indicated through Enter. Directions should be entered in the format «direction_of_movement [space] number_of_steps». After selecting the item, you will be immediately returned to the general menu. You can check the result in the skarb.txt file, where you will see the answer - the final coordinate of the treasure (if the file has not been created in advance, the program will create it itself).\nIf the number of instructions you enter is greater than the number of lines of instructions, the instructions will be repeated as many times as the number of instructions you enter. Therefore, for the accuracy of the desired result, it is recommended to enter the same number of lines with instructions as the number of instructions entered.\nIf the number of instructions entered is less than the number of lines with these instructions, the number of lines corresponding to the number of instructions will be calculated.\nYou can also change the values in the mapa.txt file without closing the program itself and calculate the final coordinate again (the skarb.txt file must be closed before doing so)." << endl
                                  << "2. Work with the console. Working with the console, in accordance with the text-request, you enter the necessary data (directions - from 1 to 40, direction of movement - a number from 1 to 8, number of steps in this direction - from 1 to 1000). The data input format is «direction_of_movement [space] number_of_steps». The final coordinate is also output to the console." << endl
                                  << "3. View the instructions for the program. When choosing this menu item, you have the opportunity to read an instruction that will explain to you how to use the program correctly." << endl
-                                 << "4. Change the appearance of the console. You can change the appearance of the console: background color (select the desired number or letter from the list), font color (select the desired number or letter from the list), font size (enter the required number). If you write a number/letter other than the ones in the list, you will receive an error message. Just press Enter and you will be returned to step 4, where you can re-select colors from the list. If the letter you entered was NOT from the English alphabet, there will be no error, you will simply be returned to step 4." << endl
+                                 << "4. Change the appearance of the console. You can change the appearance of the console: background color (select the desired number or letter from the list), font color (select the desired number or letter from the list), font size (enter the required number).\nYou can't choose the same text and background color - in this case, the program will return you to the main menu.\nIf you write a number/letter other than the ones in the list, you will receive an error message. Just press Enter and you will be returned to step 4, where you can re-select colors from the list.\nIf the letter you entered was NOT from the English alphabet, there will be no error, you will simply be returned to step 4." << endl
                                  << "5. Exit the program. Selecting this item exits the program\n"
                                  << endl;
                             break;
@@ -476,21 +477,22 @@ int main()
                                     {
                                         system("cls"); // очистка консолі
                                         cout << "List of colors:" << endl
-                                             << "0 – black" << endl
-                                             << "1 – blue" << endl
-                                             << "2 – green" << endl
-                                             << "3 – light blue" << endl
-                                             << "4 – red" << endl
-                                             << "5 – light purple" << endl
-                                             << "6 – yellow" << endl
-                                             << "7 – white" << endl
-                                             << "8 – gray" << endl
-                                             << "9 – bright blue" << endl
-                                             << "А – bright green" << endl
-                                             << "B – bright light blue" << endl
-                                             << "C – bright red" << endl
-                                             << "E – bright yellow" << endl
-                                             << "F – bright white" << endl
+                                             << "0 – Black" << endl
+                                             << "1 – Blue" << endl
+                                             << "2 – Green" << endl
+                                             << "3 – Aqua" << endl
+                                             << "4 – Red" << endl
+                                             << "5 – Purple" << endl
+                                             << "6 – Yellow" << endl
+                                             << "7 – White" << endl
+                                             << "8 – Gray" << endl
+                                             << "9 – Light Blue" << endl
+                                             << "А – Light Green" << endl
+                                             << "B – Light Aqua" << endl
+                                             << "C – Light Red" << endl
+                                             << "D – Light Purple" << endl
+                                             << "E – Light Yellow" << endl
+                                             << "F – Bright White" << endl
                                              << endl;
 
                                         cout << "The color of the text: ";
