@@ -203,6 +203,7 @@ int main()
                                 cout << "\nЩо ви хочете зробити? " << endl;
                                 cout << "1. Змінити колір тексту і фону" << endl;
                                 cout << "2. Змінити розмір шрифту " << endl;
+                                cout << "3. Повернутись до головного меню " << endl;
                                 cout << "Ваш вибір: ";
                                 cin >> input;
 
@@ -261,17 +262,25 @@ int main()
                                         SetCurrentConsoleFontEx(hConsole, FALSE, &fontInfo); // юзаєм новий шрифт
                                         break;
                                     }
+                                    case 3:
+                                    {
+                                        system("cls");
+                                        cout << "\nПовертаємось до меню..." << endl;
+                                        break;
+                                    }
                                     default:
-                                        cout << "\nПросто напишіть 1 чи 2!\n"
+                                    system("cls");
+                                        cout << "\nПросто напишіть 1, 2 чи 3!\n"
                                              << endl;
                                     }
                                 }
                                 else 
                                 {
-                                    cout << "\nБудь ласка, напишіть 1 чи 2!\n" // якщо 1 символ введеного значення інпут НЕ є потрібним числом, то виведе прохання написати нормально
+                                    system("cls");
+                                    cout << "\nБудь ласка, напишіть 1, 2 чи 3!\n" // якщо 1 символ введеного значення інпут НЕ є потрібним числом, то виведе прохання написати нормально
                                          << endl;
                                 }
-                            } while (appearence != 2);
+                            } while (appearence != 3);
                             break;
                         }
                         // * вихід українською
@@ -282,12 +291,14 @@ int main()
                             return 0;
                         }
                         default:
+                            system("cls");
                             cout << "\nПросто напишіть 1, 2, 3, 4 чи 5!\n"
                                  << endl;
                         }
                     }
                     else
                     {
+                        system("cls");
                         cout << "\nБудь ласка, напишіть 1, 2, 3, 4 чи 5!\n" // якщо 1 символ введеного значення інпут НЕ є потрібним числом, то виведе прохання написати нормально
                              << endl;
                     }
@@ -463,6 +474,7 @@ int main()
                                 cout << "\nWhat do you want to do?" << endl;
                                 cout << "1. Change the color of the text and background" << endl;
                                 cout << "2. Change the font size " << endl;
+                                cout << "3. Return to the main menu " << endl;
                                 cout << "Your choice: ";
                                 cin >> input;
 
@@ -522,16 +534,24 @@ int main()
 
                                         break;
                                     }
+                                    case 3:
+                                    {
+                                        system("cls"); // очистка консолі
+                                        cout << "\nReturning to the main menu..." << endl;
+                                        break;
+                                    }
                                     default:
-                                        cout << "\nJust print 1 or 2!\n"
+                                        system("cls");
+                                        cout << "\nJust print 1, 2 or 3!\n"
                                              << endl;
                                     }
                                 }
                                 else
                                 {
-                                    cout << "\nPlease print 1 or 2!\n" << endl; // якщо 1 символ введеного значення інпут НЕ є потрібним числом, то виведе прохання написати нормально
+                                    system("cls");
+                                    cout << "\nPlease print 1, 2 or 3!\n" << endl; // якщо 1 символ введеного значення інпут НЕ є потрібним числом, то виведе прохання написати нормально
                                 }
-                            } while (appearence != 2);
+                            } while (appearence != 3);
                             break;
                         }
                             // * вихід англійською
@@ -542,6 +562,7 @@ int main()
                             return 0;
                         }
                         default:
+                            system("cls");
                             cout << "\nJust print 1, 2, 3, 4 or 5!\n"
                                  << endl;
                         }
@@ -554,12 +575,14 @@ int main()
                 break;
             }
             default:
+                system("cls");
                 cout << "\nJust print 1 or 2!\n"
                      << endl;
             }
         }
         else
         {
+            system("cls");
             cout << "\nPlease print 1 or 2!\n"
                  << endl;
         }
