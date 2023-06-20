@@ -486,8 +486,7 @@ int main()
                                 cout << "\nWhat do you want to do?" << endl;
                                 cout << "1. Change the color of the text and background" << endl;
                                 cout << "2. Change the font size " << endl;
-                                cout << "3. Return the console color to its original value " << endl;
-                                cout << "4. Return to the main menu " << endl;
+                                cout << "3. Return to the main menu " << endl;
                                 cout << "Your choice: ";
                                 cin >> input;
 
@@ -558,13 +557,6 @@ int main()
                                         }
                                     }
                                     case 3:
-                                    {
-                                        system("cls");
-                                        system("color 07"); // повертаю колір консольки до чорного фону і білого тексту
-                                        cout << "\nNow the console looks the same as before." << endl;
-                                        break;
-                                    }
-                                    case 4:
                                     {
                                         system("cls"); // очистка консолі
                                         cout << "\nReturning to the main menu..." << endl;
